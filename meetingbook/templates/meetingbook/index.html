@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>{% block title %}Meeting Booking APP {% endblock title %}</title>
+
+    <link
+
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+
+        rel="stylesheet"
+
+    >
+    <style>
+body {background-color: #87CEEB;}
+</style>
+
+</head>
+
+<body class="container">
+
+
+
+
+
+{% block page_content %}
+
+<h1>Meetings</h1>
+
+<a href="{% url 'addmeeting' %}">Create a new Meeting</a>
+
+<div class="row">
+
+{% for meeting in meetings %}
+
+    <div class="col-md-4">
+
+        <div class="card mb-2">
+
+            <div class="card-body">
+
+                <h5 class="card-title">{{ meeting.title }}</h5>
+
+                <p class="card-text">{{ meeting.description }}</p>
+
+                <a href="{% url 'meetingdetails' meeting.id %}"
+
+                   class="btn btn-primary">
+
+                    View more
+
+                </a>
+                
+                 <h5 class="card-title">{{ meeting.status }}</h5> 
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
+</body>
+
+</html>

@@ -25,12 +25,13 @@ SECRET_KEY = '=)xvb0xzx)6t9rv4^o#+m6x+zajcues2bkm1!-cl)=!p@@m1j!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["50aa913f8fa44160941aed977322fb4f.vfs.cloud9.eu-west-1.amazonaws.com"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'meetingbook.apps.MeetingbookConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
