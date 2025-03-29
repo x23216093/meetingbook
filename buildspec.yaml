@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - pip install --upgrade pip
+      - pip install -r requirements.txt pylint
+
+  pre_build:
+    commands:
+      - echo "Python version:"
+      - python --version
+      - echo "Listing Python files:"
+      - find $CODEBUILD_SRC_DIR -name "*.py"
+      - echo "Running Pylint:"
+      - find $CODEBUILD_SRC_DIR -name "*.py" | xargs pylint --exit-zero
+
+artifacts:
+  files:
+    - '**/*'
