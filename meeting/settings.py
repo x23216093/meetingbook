@@ -25,9 +25,7 @@ SECRET_KEY = '=)xvb0xzx)6t9rv4^o#+m6x+zajcues2bkm1!-cl)=!p@@m1j!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["50aa913f8fa44160941aed977322fb4f.vfs.cloud9.eu-west-1.amazonaws.com"]
-
-
+ALLOWED_HOSTS = ['50aa913f8fa44160941aed977322fb4f.vfs.cloud9.eu-west-1.amazonaws.com', 'x23216093-meetingbook-env.eba-y7ppipid.eu-west-1.elasticbeanstalk.com']
 # Application definition
 
 INSTALLED_APPS = [
